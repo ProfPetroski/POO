@@ -1,6 +1,6 @@
 public class Principal {
     public static void main(String[] args){
-        Funcionario luiz = new Funcionario();
+        Cliente luiz = new Cliente();
         luiz.nome = "Luiz Pedro Petroski";
         luiz.cpf = "00000000000";
         luiz.cargo = "Professor";
@@ -12,7 +12,7 @@ public class Principal {
 
         System.out.println("-----------------------------------");
 
-        Funcionario pedro = new Funcionario();
+        Cliente pedro = new Cliente();
         pedro.nome = "Pedro Silva";
         pedro.cpf = "11111111111";
         pedro.cargo = "Coordenador de curso";
@@ -23,7 +23,7 @@ public class Principal {
 
         System.out.println("-----------------------------------");
 
-        Funcionario carlos = new Funcionario();
+        Cliente carlos = new Cliente();
         carlos.nome = "Carlos Souza";
         carlos.cpf = "22222222222";
         carlos.cargo = "Diretor";

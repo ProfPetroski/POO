@@ -6,7 +6,7 @@ public class Funcionario {
     Data dataNascimento;
     boolean ativo;
 
-    /*void despedir(){
+    void despedir(){
         this.ativo=false;
         System.out.println("O funcionário "+this.nome+" foi despedido");
     }
@@ -33,11 +33,9 @@ public class Funcionario {
     }
     void setDataNascimento(byte dia, byte mes, short ano){
         this.dataNascimento = new Data();
-        this.dataNascimento.setDia(dia);
-        this.dataNascimento.setMes(mes);
-        this.dataNascimento.setAno(ano);
+        this.dataNascimento.setData(dia, mes, ano);
     }
     void setDataNascimento(Data novaDataNascimento){
         this.dataNascimento = novaDataNascimento;
-    }*/
+    }
 }
