@@ -12,7 +12,15 @@ public class Principal {
         minhaCC.sacar(10.0);
         minhaCC.imprimiExtrato();
 
-        //minhaCC.saldo = 1000000.0;
-        //minhaCC.imprimiExtrato();
+        ContaPoupanca  minhaPoupanca = new ContaPoupanca("Luiz Pedro", 4, 3, 0.005);
+        minhaPoupanca.imprimiExtrato();
+        minhaPoupanca.depositar(459.25);
+        minhaPoupanca.imprimiExtrato();
+        minhaPoupanca.adicionaRendimento();
+        minhaPoupanca.imprimiExtrato();
+
+        minhaPoupanca.transfere(50.0, minhaCC);
+        minhaPoupanca.imprimiExtrato();
+        minhaCC.imprimiExtrato();
     }
 }

@@ -87,4 +87,16 @@ public class Conta {
         dadosConta += "Saldo: \t\t"+this.getSaldo()+"\n";
         return dadosConta;
     }
+
+    //Desafio
+    public void transfere(double valor, Conta destinatario){
+        if(valor>0&&this.saldo>=valor){
+            this.saldo-=valor;
+            System.out.println("Transferindo o valor de R$"+valor+" para"+destinatario.getNomeTitular());
+            destinatario.depositar(valor);
+        }
+        else{
+            System.out.println("Não foi possível realizar a transferência, verifique seu saldo.");
+        }
+    }
 }
