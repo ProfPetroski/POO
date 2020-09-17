@@ -73,10 +73,10 @@ public class Conta {
     }
 
     public void imprimiExtrato(){
-        System.out.println("===========================");
-        System.out.println("=====Extrato de conta======");
+        System.out.println("====================================");
+        System.out.println("==========Extrato de conta==========");
         System.out.println(this.toString());
-        System.out.println("===========================");
+        System.out.println("====================================");
     }
 
     public String toString(){
@@ -92,7 +92,9 @@ public class Conta {
     public void transfere(double valor, Conta destinatario){
         if(valor>0&&this.saldo>=valor){
             this.saldo-=valor;
-            System.out.println("Transferindo o valor de R$"+valor+" para"+destinatario.getNomeTitular());
+            System.out.println("Transferindo o valor de R$"+valor+" \n" +
+                    "Remetente:\t"+this.getNomeTitular()+"\n"+
+                    "Destinatário:\t"+destinatario.getNomeTitular());
             destinatario.depositar(valor);
         }
         else{

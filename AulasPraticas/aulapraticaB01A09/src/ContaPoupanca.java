@@ -27,7 +27,7 @@ public class ContaPoupanca extends Conta{
 
     @Override
     public void depositar(double valor) {
-        if(this.dataAniversario==""){
+        if(this.dataAniversario==null){
             this.dataAniversario = "28/08/2020";
         }
         super.depositar(valor);
@@ -36,7 +36,8 @@ public class ContaPoupanca extends Conta{
     @Override
     public String toString() {
         String dadosContaPoupanca;
-        dadosContaPoupanca = super.toString();
+        dadosContaPoupanca = "**********Conta Poupança**********\n";
+        dadosContaPoupanca += super.toString();
         dadosContaPoupanca += "Data de aniversário: \t"+this.getDataAniversario()+"\n";
         dadosContaPoupanca += "Rendimento mensal: \t"+this.getRendimento()+"\n";
         return dadosContaPoupanca;

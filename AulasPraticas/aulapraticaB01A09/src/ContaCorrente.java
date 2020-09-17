@@ -20,7 +20,7 @@ public class ContaCorrente extends Conta{
             System.out.println("Sacado da conta de "+ this.getNomeTitular()+" o valor de: R$"+valor);
         }
         else if(valor >= 0 && valor > this.saldo+limite){
-            System.out.println("Saldo insuficiente");
+            System.out.println("Saldo insuficiente para sacar R$"+valor);
         }
         else{
             System.out.println("Valor de saque inválido");
@@ -30,7 +30,8 @@ public class ContaCorrente extends Conta{
     @Override
     public String toString(){
         String dadosConta;
-        dadosConta = super.toString();
+        dadosConta = "**********Conta Corrente**********\n";
+        dadosConta += super.toString();
         dadosConta += "Limite: \t"+this.getLimite()+"\n";
         return dadosConta;
     }
