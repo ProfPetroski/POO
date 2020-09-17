@@ -54,9 +54,10 @@ public class Agencia {
         for(int i=0; i<this.listaContaCorrente.length;i++){
             if(this.listaContaCorrente[i]==null){
                 listaContaCorrente[i]=novaCC;
+                return novaCC;
             }
         }
-        return novaCC;
+        return null;
     }
     public ContaPoupanca novaContaPoupanca(String nomeTitular){
         //A fazer ....
