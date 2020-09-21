@@ -45,15 +45,24 @@ public class Agencia {
     public ContaCorrente novaContaCorrente(String nomeTitular){
         ContaCorrente novaContaCorrente = new ContaCorrente(nomeTitular, this.numeroAgencia, this.proximoNumeroConta, this.limitePadrao);
         this.proximoNumeroConta++;
+
         for(int i=0; i<this.listaContaCorrente.length; i++){
             if(listaContaCorrente[i]==null){
                 listaContaCorrente[i]=novaContaCorrente;
+                return novaContaCorrente;
             }
         }
-        return novaContaCorrente;
+        return null;
     }
     public ContaPoupanca novaContaPoupanca(String nomeTitular){
-        //A fazer ....
+        ContaPoupanca novaContaPoupanca = new ContaPoupanca(nomeTitular, this.numeroAgencia, this.proximoNumeroConta,this.rendimentoPadrao);
+        this.proximoNumeroConta++;
+        for(int i=0; i<this.listaContaPoupanca.length; i++){
+            if(listaContaPoupanca[i]==null){
+                listaContaPoupanca[i]=novaContaPoupanca;
+                return novaContaPoupanca;
+            }
+        }
         return null;
     }
 
@@ -61,7 +70,13 @@ public class Agencia {
         conta.sacar(5.0);
     }
     public double balanco(Conta listaContas[]){
-        //A fazer ...
-        return 0;
+        double balanco = 0;
+        for(Conta c: listaContas){
+            if(c!=null)
+                balanco+=c.getSaldo();
+        }
+        return balanco;
     }
+
+
 }
