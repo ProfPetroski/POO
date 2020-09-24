@@ -64,7 +64,7 @@ public class Conta {
             this.saldo-=valor;
             System.out.println("Sacado da conta de "+ this.getNomeTitular()+" o valor de: R$"+valor);
         }
-        if(valor >= 0 && valor > this.saldo){
+        else if(valor >= 0 && valor > this.saldo){
             System.out.println("Saldo insuficiente");
         }
         else{
@@ -88,21 +88,4 @@ public class Conta {
         return dadosConta;
     }
 
-    //Desafio
-    public void transfere(double valor, Conta destinatario){
-        if(valor>0&&this.saldo>=valor){
-            this.saldo-=valor;
-            System.out.println("Transferindo o valor de R$"+valor+" para"+destinatario.getNomeTitular());
-            destinatario.depositar(valor);
-        }
-        else{
-            System.out.println("Não foi possível realizar a transferência, verifique seu saldo.");
-        }
-    }
-    public boolean equals(Conta conta){
-        if(this.getNomeTitular()==conta.getNomeTitular()&&this.getNumero()==conta.getNumero()){
-            return true;
-        }
-        return false;
-    }
 }

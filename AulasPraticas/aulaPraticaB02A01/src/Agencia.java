@@ -60,7 +60,14 @@ public class Agencia {
         return null;
     }
     public ContaPoupanca novaContaPoupanca(String nomeTitular){
-        //A fazer ....
+        ContaPoupanca novaContaPoupanca = new ContaPoupanca(nomeTitular, this.numeroAgencia, this.proximoNumeroConta,this.rendimentoPadrao);
+        this.proximoNumeroConta++;
+        for(int i=0; i<this.listaContaPoupanca.length; i++){
+            if(listaContaPoupanca[i]==null){
+                listaContaPoupanca[i]=novaContaPoupanca;
+                return novaContaPoupanca;
+            }
+        }
         return null;
     }
     public void cobrarTaxa(Conta conta){
@@ -70,8 +77,12 @@ public class Agencia {
     }
 
     public double balanco(Conta listaContas[]){
-        //A fazer ...
-        return 0;
+        double balanco = 0;
+        for(Conta c: listaContas){
+            if(c!=null)
+                balanco+=c.getSaldo();
+        }
+        return balanco;
     }
 
 
