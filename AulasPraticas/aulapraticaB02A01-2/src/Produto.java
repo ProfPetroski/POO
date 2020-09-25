@@ -1,7 +1,7 @@
 public class Produto {
-    public String marca;
-    public String modelo;
-    public double preco;
+    private String marca;
+    private String modelo;
+    private double preco;
 
     public Produto(String marca, String modelo, double preco){
         this.marca = marca;
