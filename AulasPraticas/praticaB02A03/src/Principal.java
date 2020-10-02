@@ -1,5 +1,6 @@
 public class Principal {
     public static void main(String args[]){
+        //Exemplos mostrados em aula prática...
         Monitor novoMonitor = new Monitor("LG", "ln19", 650.0, 19);
         Monitor novoMonitor2 = new Monitor("LG", "ln19", 550.0, 19);
 
@@ -19,5 +20,7 @@ public class Principal {
 
         System.out.println("4 Monitores = "+promo.valorPromocional(4)+"\n");
         System.out.println("2 Monitores = "+promo.valorPromocional(2)+"\n");
+
+        // Implementar classe computador e continuar....
     }
 }
