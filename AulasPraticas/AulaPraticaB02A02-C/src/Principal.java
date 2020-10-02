@@ -9,6 +9,7 @@ public class Principal {
         ContaCorrente cc;
 
         //c = new Conta("Luiz", 1, 1); Não funciona pois é abstrato
+
         cc = new ContaCorrente("Luiz", 1, 1, 500.0);
         c  = cc;
         c.setNomeTitular("Luiz Pedro da Silva");
