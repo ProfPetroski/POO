@@ -1,4 +1,4 @@
-public class Conta {
+public abstract class Conta {
     protected String nomeTitular;
     protected int agencia;
     protected int numero;
@@ -71,11 +71,13 @@ public class Conta {
 
     //Desafio
     public void transfere(double valor, Conta destinatario){
-        this.sacar(valor);
-        destinatario.depositar(valor);
+        if(this.sacar(valor)==1){
+            destinatario.depositar(valor);
+        }
     }
     /*
     Conseguimos acessar os métodos abstratos a partir deste método concreto?
-    R:
+    R: Sim, pois os métodos estarão presentes na referência do obojeto criado a partir
+    da classe concreta que herda (extends) esta classe abstrata.
      */
 }

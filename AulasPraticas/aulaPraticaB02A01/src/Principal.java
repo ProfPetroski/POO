@@ -16,6 +16,8 @@ public class Principal {
         novaAgencia.getListaContaCorrente()[0].depositar(2400.97);
         novaAgencia.getListaContaCorrente()[1].depositar(1345.32);
 
+        novaAgencia.getListaContaPoupanca()[0].setNomeTitular("Tete");
+
         System.out.println("[Log] => Cobrar a taxa de duas contas");
         novaAgencia.cobrarTaxa(novaAgencia.getListaContaPoupanca()[0]);
         novaAgencia.cobrarTaxa(novaAgencia.getListaContaCorrente()[0]);
