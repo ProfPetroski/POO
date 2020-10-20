@@ -1,4 +1,4 @@
-import br.uepg.deinfo.Funcionario;
+package br.uepg.deinfo;
 import br.uepg.deinfo.ensino.Professor;
 
 public class Principal {
